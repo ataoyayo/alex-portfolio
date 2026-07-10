@@ -78,8 +78,8 @@ export const projects = [
     slug: "ai-short-form-video-workflow",
     size: "large",
     previewType: {
-      en: "Workflow screenshot / vertical demo placeholder",
-      zh: "工作流截图 / 竖屏 demo 占位"
+      en: "Alex to GPT to Coze workflow",
+      zh: "Alex 到 GPT 到 Coze 工作流"
     },
     title: {
       en: "AI Short-form Video Workflow",
@@ -102,8 +102,8 @@ export const projects = [
     slug: "codex-projects",
     size: "normal",
     previewType: {
-      en: "Stacked prototype screenshots placeholder",
-      zh: "多项目截图叠放占位"
+      en: "Alex, GPT and Codex collaboration loop",
+      zh: "Alex、GPT 与 Codex 协作闭环"
     },
     title: {
       en: "Codex Projects",
@@ -126,8 +126,8 @@ export const projects = [
     slug: "tiki-boom",
     size: "normal",
     previewType: {
-      en: "Interview frames / PPT screenshot placeholder",
-      zh: "采访画面 / PPT 截图占位"
+      en: "Street interview content collage",
+      zh: "街访内容项目拼贴"
     },
     title: {
       en: "TIKI BOOM Street Interview Project",
@@ -265,7 +265,7 @@ export const detailContent = {
         },
         {
           title: "Workflow Demo",
-          body: "Placeholder for a 5-second MP4 demo: click to run workflow nodes, then show script, prompt, and video output."
+          body: "A short MP4 demo shows the workflow running from node execution to generated prompts and output."
         },
         {
           title: "Workflow Logic",
@@ -273,11 +273,11 @@ export const detailContent = {
         },
         {
           title: "Output Examples",
-          body: "Placeholder area for workflow screenshots, vertical video previews, covers, video frames, and publishing copy."
+          body: "The current evidence includes prompt-generation output and a successful image-generation result from the workflow."
         },
         {
           title: "Example Case",
-          body: "A later version can show how one brand input becomes a complete video production route."
+          body: "The showcased run demonstrates how a brand input moves through reusable prompts, image generation, and workflow output."
         },
         {
           title: "What This Shows",
@@ -291,7 +291,7 @@ export const detailContent = {
         },
         {
           title: "Reflection",
-          body: "The next step is replacing placeholders with real workflow captures, videos, and examples from repeatable brand content tests."
+          body: "The current version demonstrates the complete workflow structure and selected outputs. Further iterations focus on testing repeatability across more brand inputs."
         }
       ],
       zh: [
@@ -301,7 +301,7 @@ export const detailContent = {
         },
         {
           title: "工作流演示",
-          body: "这里预留 5 秒 MP4 demo：点击运行节点，随后展示脚本、提示词和视频结果。"
+          body: "短 MP4 demo 展示了工作流从节点运行到提示词与结果产出的过程。"
         },
         {
           title: "工作流逻辑",
@@ -309,11 +309,11 @@ export const detailContent = {
         },
         {
           title: "输出示例",
-          body: "这里预留工作流截图、竖屏视频成片预览、视频封面、视频帧和发布文案。"
+          body: "当前证据包括工作流中的提示词生成输出与图像生成成功结果。"
         },
         {
           title: "案例示例",
-          body: "后续可以展示一个品牌输入如何被拆解成完整的视频生产路径。"
+          body: "页面中的实际运行案例展示了品牌输入如何经过可复用提示词、图像生成和工作流输出。"
         },
         {
           title: "能力体现",
@@ -327,7 +327,7 @@ export const detailContent = {
         },
         {
           title: "复盘",
-          body: "下一步会用真实工作流截图、视频结果和品牌测试案例替换当前占位内容。"
+          body: "当前版本已经展示完整工作流结构和部分真实输出，后续迭代重点是用更多品牌输入验证流程的可复用性。"
         }
       ]
     }
@@ -354,7 +354,7 @@ export const detailContent = {
         },
         {
           title: "Instruction Examples",
-          body: "Placeholder for screenshots of GPT decisions, Codex instructions, and resulting interface states."
+          body: "Specific GPT decision and Codex instruction screenshots are not published in this version. The implemented prototypes and interface states serve as the current execution evidence."
         },
         {
           title: "What This Shows",
@@ -368,7 +368,7 @@ export const detailContent = {
         },
         {
           title: "Reflection",
-          body: "The next step is to add real screenshots and demos from each prototype."
+          body: "The current collection combines live demos, interface screenshots, PR materials, and this portfolio build to document the GPT-to-Codex collaboration process."
         }
       ],
       zh: [
@@ -391,7 +391,7 @@ export const detailContent = {
         },
         {
           title: "指令示例",
-          body: "这里预留 GPT 决策、Codex 指令和最终界面结果截图。"
+          body: "本版本暂未公开具体的 GPT 决策与 Codex 指令截图，当前以已完成的原型、界面状态和项目材料作为执行证据。"
         },
         {
           title: "能力体现",
@@ -399,7 +399,7 @@ export const detailContent = {
         },
         {
           title: "复盘",
-          body: "下一步会补充每个原型的真实截图和短 demo。"
+          body: "当前项目合集通过公开 Demo、界面截图、PR 材料和作品集网站本身，记录 GPT-to-Codex 协作与落地过程。"
         }
       ]
     }

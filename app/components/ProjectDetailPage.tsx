@@ -36,12 +36,10 @@ function ScreenshotFrame({
 
 function VideoFrame({
   title,
-  src,
-  fallback = "Workflow demo unavailable."
+  src
 }: {
   title: string;
   src: string;
-  fallback?: string;
 }) {
   return (
     <figure className="screenshot-frame video-frame">
@@ -49,7 +47,6 @@ function VideoFrame({
       <div className="screenshot-frame-inner video-frame-inner">
         <video className="workflow-demo-video" autoPlay muted loop playsInline controls={false} preload="metadata">
           <source src={assetPath(src)} type="video/mp4" />
-          {fallback}
         </video>
       </div>
     </figure>
@@ -62,7 +59,6 @@ function JobMatchingShowcase({ locale }: { locale: Locale }) {
       <VideoFrame
         title={locale === "en" ? "Demo" : "交互演示"}
         src="/media/job-matching-demo.mp4"
-        fallback="Job matching demo unavailable."
       />
       <div className="job-matching-screens">
         <ScreenshotFrame
@@ -442,14 +438,20 @@ export function ProjectDetailPage({ locale, slug }: ProjectDetailPageProps) {
             </div>
             <div>
               <dt>{locale === "en" ? "Status" : "状态"}</dt>
-              <dd>{locale === "en" ? "Placeholder assets" : "素材占位中"}</dd>
+              <dd>{locale === "en" ? "In active development" : "持续迭代中"}</dd>
             </div>
           </dl>
           <MediaPlaceholder
             label={project.previewType[locale]}
             variant="vertical"
-            imageSrc={slug === "ai-short-form-video-workflow" ? "/media/ai-workflow-card.png" : undefined}
-            imageAlt={slug === "ai-short-form-video-workflow" ? project.title[locale] : undefined}
+            imageSrc={
+              slug === "ai-short-form-video-workflow"
+                ? "/media/ai-workflow-card.png"
+                : slug === "codex-projects"
+                  ? "/media/medical-diet-used-overview.png"
+                  : "/media/tiki-cover-interview.jpg"
+            }
+            imageAlt={project.title[locale]}
             imageFit="cover"
           />
         </aside>
