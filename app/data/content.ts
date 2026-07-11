@@ -146,8 +146,8 @@ export const projects = [
       zh: "夜生活场景下的内容实践、嘉宾协作与「藏夜」经典案例。"
     },
     meta: {
-      en: ["Short-form Content", "Street Interview", "2024 / 2025"],
-      zh: ["短视频内容", "街头采访", "2024 / 2025"]
+      en: ["Short-form Content", "Street Interview", "2024"],
+      zh: ["短视频内容", "街头采访", "2024"]
     },
     homeMeta: {
       en: ["Short-form Content", "Street Interview", "2024"],
@@ -479,8 +479,13 @@ export const detailContent = {
           points: ["Early short-form content execution", "Topic design for nightlife scenes", "Guest screening and on-site communication", "Editing and publishing awareness", "Basic content performance review"]
         },
         {
-          title: "Reflection",
-          body: "This page should stay modest and evidence-led because the project is early and remaining materials are limited."
+          title: "Growth Thinking",
+          subtitle: "How repeated publishing and feedback shaped the content strategy.",
+          principles: [
+            ["Strong content starts with a clear audience.", "Content performance depends not only on production quality, but also on a clear understanding of the audience. Audience definition, account positioning, and communication goals shape the topics, interview questions, and presentation style that follow."],
+            ["Every post is a content experiment.", "Each post tests a content hypothesis. Viewing performance, audience interaction, and topic response help reveal which directions deserve further investment, rather than treating publication as the end of the process."],
+            ["Growth comes from learning, not guessing.", "Content growth should not depend on an occasional viral result. It comes from repeatedly analysing feedback, adjusting content direction, and refining presentation, so each release informs the next content decision."]
+          ]
         }
       ],
       zh: [
@@ -505,8 +510,13 @@ export const detailContent = {
           points: ["早期短视频内容执行", "夜生活场景下的话题设计", "嘉宾筛选与现场沟通", "剪辑发布意识", "基础内容数据观察"]
         },
         {
-          title: "复盘",
-          body: "这个页面会保持轻量和克制，不把早期项目包装成成熟商业投放案例。"
+          title: "增长思考",
+          subtitle: "这个内容项目如何在持续发布与反馈中形成增长判断。",
+          principles: [
+            ["好的内容，始于明确的受众。", "内容表现不仅取决于制作质量，更取决于是否理解目标受众。明确受众、内容定位和账号目标，是后续选题、采访问题和表达方式的前提。"],
+            ["每一次发布，都是一次内容实验。", "每一次内容发布都是一次假设验证。通过观察播放表现、互动反馈和话题反应，判断哪些方向值得继续投入，而不是把发布当作内容流程的终点。"],
+            ["增长来自持续学习，而不是不断猜测。", "内容增长并不依赖偶然爆款，而是依靠持续分析反馈、调整内容方向和优化表达方式。每一次发布都应成为下一轮内容策略的依据。"]
+          ]
         }
       ]
     }
