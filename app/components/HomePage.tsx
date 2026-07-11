@@ -53,6 +53,7 @@ export function HomePage({ locale }: HomePageProps) {
                 label={project.previewType[locale]}
                 variant={placeholderVariantBySlug[project.slug]}
                 imageFit="cover"
+                locale={locale}
               />
               <div className="project-card-content">
                 <div>

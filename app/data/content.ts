@@ -22,7 +22,6 @@ export const homeContent = {
       university: "Massey University",
       degree: "Master of Management — Communication ↗",
       issue: "PORTFOLIO / 2026",
-      topics: "COMMUNICATION · CONTENT · AI",
       cta: "View projects"
     },
     projectsTitle: "Selected Projects.",
@@ -58,7 +57,6 @@ export const homeContent = {
       university: "梅西大学",
       degree: "传播硕士 ↗",
       issue: "个人作品集 / 2026",
-      topics: "传播 · 内容 · AI",
       cta: "查看项目"
     },
     projectsTitle: "精选项目。",

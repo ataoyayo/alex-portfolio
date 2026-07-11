@@ -12,7 +12,6 @@ type HeroTextProps = {
     university: string;
     degree: string;
     issue: string;
-    topics: string;
   };
 };
 
@@ -66,8 +65,6 @@ export function HeroText({ locale, hero }: HeroTextProps) {
     <div className="hero-content reveal">
       <div className="hero-editorial-meta" style={{ opacity: opacity.meta }}>
         <span>{hero.issue}</span>
-        <span aria-hidden="true" />
-        <span>{hero.topics}</span>
       </div>
       <h1 className={`hero-title hero-title--${locale}`} aria-label={hero.title} style={{ opacity: opacity.title }}>
         {hero.titleLines.map((line) => (

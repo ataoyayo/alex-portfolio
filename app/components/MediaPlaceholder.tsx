@@ -1,4 +1,5 @@
 import { assetPath } from "../lib/assetPath";
+import type { Locale } from "../data/content";
 
 type MediaPlaceholderProps = {
   label: string;
@@ -6,9 +7,10 @@ type MediaPlaceholderProps = {
   imageSrc?: string;
   imageAlt?: string;
   imageFit?: "cover" | "contain";
+  locale: Locale;
 };
 
-export function MediaPlaceholder({ label, variant = "workflow", imageSrc, imageAlt, imageFit = "cover" }: MediaPlaceholderProps) {
+export function MediaPlaceholder({ label, variant = "workflow", imageSrc, imageAlt, imageFit = "cover", locale }: MediaPlaceholderProps) {
   return (
     <div className={`media-placeholder media-placeholder--${variant}`}>
       {imageSrc ? (
@@ -84,13 +86,13 @@ export function MediaPlaceholder({ label, variant = "workflow", imageSrc, imageA
       )}
       {!imageSrc && variant === "tiki" && (
         <div className="tiki-collage-tags" aria-hidden="true">
-          <span>200+ videos</span>
-          <span>170K+ views</span>
-          <span>Street Interview</span>
+          <span>{locale === "zh" ? "200 多个视频" : "200+ videos"}</span>
+          <span>{locale === "zh" ? "超过 17 万次观看" : "170K+ views"}</span>
+          <span>{locale === "zh" ? "街头采访" : "Street Interview"}</span>
         </div>
       )}
-      {!imageSrc && variant !== "codex" && (
-        <div className="placeholder-label">{variant === "workflow" ? "IDEA → PROMPT → WORKFLOW" : label}</div>
+      {!imageSrc && variant === "workflow" && (
+        <div className="placeholder-label">IDEA → PROMPT → WORKFLOW</div>
       )}
     </div>
   );
