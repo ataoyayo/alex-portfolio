@@ -664,7 +664,7 @@ export function ProjectDetailPage({ locale, slug }: ProjectDetailPageProps) {
 
   return (
     <ImageLightboxProvider locale={locale}>
-    <main className="site-shell detail-shell">
+    <main className={`site-shell detail-shell detail-shell--${slug} detail-shell--${locale}`}>
       <header className="topbar detail-topbar">
         <Link className="name-badge" href={`/${locale}`}>
           {locale === "en" ? "Alex" : "阿涛"}
@@ -677,7 +677,11 @@ export function ProjectDetailPage({ locale, slug }: ProjectDetailPageProps) {
 
       <section className="detail-hero">
         <p className="project-meta">{project.meta[locale].join(" / ")}</p>
-        <h1>{project.title[locale]}</h1>
+        <h1>
+          {slug === "tiki-boom" && locale === "zh" ? (
+            <><span>TIKI BOOM</span>{" "}<span>街头采访内容项目</span></>
+          ) : project.title[locale]}
+        </h1>
         <p>{project.detailSubtitle[locale]}</p>
       </section>
 

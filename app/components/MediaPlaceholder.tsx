@@ -80,11 +80,13 @@ export function MediaPlaceholder({ label, variant = "workflow", imageSrc, imageA
           <div className="tiki-collage-slide tiki-collage-slide--results">
             <img src={assetPath("/media/tiki-results.png")} alt="" />
           </div>
-          <div className="tiki-collage-tags">
-            <span>200+ videos</span>
-            <span>170K+ views</span>
-            <span>Street Interview</span>
-          </div>
+        </div>
+      )}
+      {!imageSrc && variant === "tiki" && (
+        <div className="tiki-collage-tags" aria-hidden="true">
+          <span>200+ videos</span>
+          <span>170K+ views</span>
+          <span>Street Interview</span>
         </div>
       )}
       {!imageSrc && variant !== "codex" && (

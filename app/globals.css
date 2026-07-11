@@ -2526,6 +2526,65 @@ p {
   .lightbox-trigger-label { opacity: 1; transform: none; }
 }
 
+/* Targeted spacing fixes for the editorial metadata and TIKI preview. */
+.detail-shell--tiki-boom.detail-shell--zh .detail-hero h1 {
+  max-width: 1180px;
+  font-size: clamp(48px, 7vw, 100px);
+  line-height: 0.94;
+}
+
+.detail-shell--tiki-boom.detail-shell--zh .detail-hero h1 span {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.media-placeholder--tiki {
+  min-height: 250px;
+  padding-bottom: 48px;
+}
+
+.media-placeholder--tiki .tiki-collage {
+  inset: 18px 18px 58px;
+}
+
+.media-placeholder--tiki .tiki-collage-tags {
+  left: 18px;
+  right: 18px;
+  bottom: 14px;
+  z-index: 8;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+
+.media-placeholder--tiki .tiki-collage-tags span {
+  padding: 5px 8px;
+  background: rgba(12, 12, 14, 0.86);
+  backdrop-filter: none;
+}
+
+@media (max-width: 520px) {
+  .detail-shell--tiki-boom.detail-shell--zh .detail-hero h1 {
+    font-size: clamp(36px, 10.4vw, 42px);
+    line-height: 1;
+  }
+
+  .media-placeholder--tiki {
+    min-height: 238px;
+  }
+
+  .media-placeholder--tiki .tiki-collage {
+    inset: 14px 14px 58px;
+  }
+
+  .media-placeholder--tiki .tiki-collage-tags {
+    left: 14px;
+    right: 14px;
+    bottom: 12px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+}
+
 @media (max-width: 767px) {
   .hero-portrait {
     inset: 0 auto auto 52%;
@@ -2689,10 +2748,10 @@ p {
 
 .hero-editorial-meta {
   display: grid;
-  grid-template-columns: auto minmax(48px, 160px) auto;
+  grid-template-columns: auto minmax(36px, 90px) auto;
   align-items: center;
-  width: min(720px, 58vw);
-  gap: 14px;
+  width: min(520px, 42vw);
+  gap: 12px;
   margin-bottom: 18px;
   color: rgba(245, 242, 235, 0.58);
   font-size: 11px;
