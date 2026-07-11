@@ -2101,3 +2101,179 @@ p {
     background-position: 50% 0%;
   }
 }
+
+/* Editorial hero refinement: directional portrait blending and asymmetric cover composition. */
+.hero-section::after {
+  background:
+    linear-gradient(90deg, rgba(5, 5, 5, 0.9) 0%, rgba(5, 5, 5, 0.42) 32%, rgba(5, 5, 5, 0.08) 66%, rgba(5, 5, 5, 0.46) 100%),
+    linear-gradient(180deg, rgba(5, 5, 5, 0.08) 0%, rgba(5, 5, 5, 0) 52%, rgba(5, 5, 5, 0.54) 100%);
+}
+
+.hero-section::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  content: "";
+  opacity: 0.045;
+  background-image: repeating-radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.42) 0 0.6px, transparent 0.8px 3px);
+  mix-blend-mode: soft-light;
+}
+
+.hero-portrait,
+.hero-section--zh .hero-portrait {
+  inset: 0 auto 0 60%;
+  width: min(56vw, 820px);
+  height: auto;
+  opacity: 0.94;
+  transform: translateX(-50%);
+  background-image:
+    linear-gradient(90deg, rgba(5, 5, 5, 0.38) 0%, rgba(5, 5, 5, 0.06) 28%, rgba(5, 5, 5, 0) 76%, rgba(5, 5, 5, 0.18) 100%),
+    var(--hero-portrait-url);
+  background-position: 50% 0;
+  background-size: cover;
+  filter: grayscale(1) contrast(1.12) brightness(0.94);
+  mask-image:
+    linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.82) 9%, black 18%, black 94%, transparent 100%),
+    linear-gradient(180deg, black 0%, black 84%, rgba(0, 0, 0, 0.82) 91%, transparent 100%);
+  mask-composite: intersect;
+}
+
+.hero-content,
+.hero-section--zh .hero-content {
+  bottom: clamp(24px, 3.5vh, 52px);
+  text-align: left;
+}
+
+.hero-content h1,
+.hero-content .hero-title--zh {
+  margin-inline: 0;
+  max-width: min(980px, 70vw);
+}
+
+.hero-content h1 {
+  font-size: clamp(92px, 11vw, 176px);
+}
+
+.hero-content .hero-title--zh {
+  font-size: clamp(72px, 8vw, 128px);
+}
+
+.hero-title-line {
+  margin-inline: 0;
+}
+
+.hero-description,
+.hero-section--zh .hero-description,
+.hero-meta {
+  margin-left: 0;
+  margin-right: 0;
+  justify-content: flex-start;
+}
+
+.hero-description,
+.hero-section--zh .hero-description {
+  max-width: min(760px, 62vw);
+}
+
+.hero-editorial-meta {
+  display: grid;
+  grid-template-columns: auto minmax(48px, 160px) auto;
+  align-items: center;
+  width: min(720px, 58vw);
+  gap: 14px;
+  margin-bottom: 18px;
+  color: rgba(245, 242, 235, 0.58);
+  font-size: 11px;
+  line-height: 1;
+  text-transform: uppercase;
+  transition: opacity 120ms linear;
+}
+
+.hero-editorial-meta > span:nth-child(2) {
+  height: 1px;
+  background: rgba(245, 242, 235, 0.22);
+}
+
+@media (max-width: 860px) {
+  .hero-section::after {
+    background:
+      linear-gradient(90deg, rgba(5, 5, 5, 0.68) 0%, rgba(5, 5, 5, 0.1) 52%, rgba(5, 5, 5, 0.34) 100%),
+      linear-gradient(180deg, rgba(5, 5, 5, 0.02) 0%, rgba(5, 5, 5, 0) 48%, rgba(5, 5, 5, 0.76) 86%, var(--bg) 100%);
+  }
+
+  .hero-portrait,
+  .hero-section--zh .hero-portrait {
+    inset: 0 auto auto 57%;
+    width: 108vw;
+    height: 72svh;
+    opacity: 0.92;
+    transform: translateX(-50%);
+    background-image:
+      linear-gradient(90deg, rgba(5, 5, 5, 0.34) 0%, rgba(5, 5, 5, 0.03) 35%, rgba(5, 5, 5, 0.06) 82%, rgba(5, 5, 5, 0.28) 100%),
+      var(--hero-portrait-url);
+    background-position: 50% 0;
+    background-size: cover;
+    filter: grayscale(1) contrast(1.1) brightness(0.94);
+    mask-image: linear-gradient(180deg, black 0%, black 73%, rgba(0, 0, 0, 0.78) 84%, transparent 100%);
+    mask-composite: initial;
+  }
+
+  .hero-content,
+  .hero-section--zh .hero-content {
+    bottom: 24px;
+    text-align: left;
+  }
+
+  .hero-content h1,
+  .hero-content .hero-title--zh {
+    max-width: 92vw;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(58px, 14.6vw, 76px);
+  }
+
+  .hero-content .hero-title--zh {
+    font-size: clamp(46px, 11.2vw, 58px);
+  }
+
+  .hero-description,
+  .hero-section--zh .hero-description {
+    max-width: min(680px, 92vw);
+  }
+
+  .hero-editorial-meta {
+    width: min(620px, 86vw);
+    grid-template-columns: auto minmax(28px, 1fr) auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-portrait,
+  .hero-section--zh .hero-portrait {
+    left: 58%;
+    width: 116vw;
+    height: 70svh;
+    background-position: 50% 0;
+  }
+
+  .hero-content,
+  .hero-section--zh .hero-content {
+    bottom: 20px;
+  }
+
+  .hero-editorial-meta {
+    width: 88vw;
+    margin-bottom: 12px;
+    font-size: 9px;
+  }
+
+  .hero-editorial-meta > span:last-child {
+    display: none;
+  }
+
+  .hero-editorial-meta {
+    grid-template-columns: auto minmax(40px, 1fr);
+  }
+}

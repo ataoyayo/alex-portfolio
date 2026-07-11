@@ -21,6 +21,8 @@ export const homeContent = {
       description: "Communication projects, content experiments, media practice, and AI workflows.",
       university: "Massey University",
       degree: "Master of Management — Communication ↗",
+      issue: "PORTFOLIO / 2026",
+      topics: "COMMUNICATION · CONTENT · AI",
       cta: "View projects"
     },
     projectsTitle: "Selected Projects.",
@@ -55,6 +57,8 @@ export const homeContent = {
       description: "传播项目、内容、媒体实践与 AI 工作流。",
       university: "梅西大学",
       degree: "传播硕士 ↗",
+      issue: "个人作品集 / 2026",
+      topics: "传播 · 内容 · AI",
       cta: "查看项目"
     },
     projectsTitle: "精选项目。",
