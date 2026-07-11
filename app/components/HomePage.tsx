@@ -56,7 +56,9 @@ export function HomePage({ locale }: HomePageProps) {
               />
               <div className="project-card-content">
                 <div>
-                  <p className="project-meta">{project.meta[locale].join(" / ")}</p>
+                  <p className="project-meta">
+                    {("homeMeta" in project ? project.homeMeta[locale] : project.meta[locale]).join(" / ")}
+                  </p>
                   <h3>{project.title[locale]}</h3>
                 </div>
                 <span className="project-arrow" aria-hidden="true">
@@ -92,7 +94,7 @@ export function HomePage({ locale }: HomePageProps) {
                 </div>
                 <div>
                   <h3>{experience.company[locale]}</h3>
-                  <p>{experience.time}</p>
+                  <p>{experience.time[locale]}</p>
                 </div>
               </div>
               <div className="timeline-node" aria-hidden="true" />

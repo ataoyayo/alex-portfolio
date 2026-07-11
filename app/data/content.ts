@@ -144,6 +144,10 @@ export const projects = [
     meta: {
       en: ["Short-form Content", "Street Interview", "2024 / 2025"],
       zh: ["短视频内容", "街头采访", "2024 / 2025"]
+    },
+    homeMeta: {
+      en: ["Short-form Content", "Street Interview", "2024"],
+      zh: ["短视频内容", "街头采访", "2024"]
     }
   }
 ] as const;
@@ -158,18 +162,21 @@ export const experiences = [
       en: "International News & Content Intern",
       zh: "国际新闻与内容执行实习"
     },
-    time: "2024",
+    time: {
+      en: "Nov 2025 – Feb 2026",
+      zh: "2025.11–2026.02"
+    },
     logo: "CN",
     logoSrc: "/media/logo-cover-news.png",
     bullets: {
       en: [
-        "Supported overseas news monitoring, topic screening, and communication value assessment.",
-        "Assisted with international news livestreams, event execution, and video editing.",
+        "Monitored overseas news developments, screened story leads, and assessed communication value.",
+        "Coordinated international news livestream preparation and event execution, and produced video edits.",
         "Developed a four-dimension screening approach to improve topic selection efficiency."
       ],
       zh: [
-        "参与海外热点监测、线索筛选与传播价值判断。",
-        "协助国际新闻直播、活动执行与视频内容剪辑。",
+        "开展海外热点监测、线索筛选与传播价值判断。",
+        "筹备与执行国际新闻直播及活动，并制作视频内容。",
         "建立四维度线索研判思路，提高新闻线索筛选效率。"
       ]
     }
@@ -183,16 +190,19 @@ export const experiences = [
       en: "Production Intern",
       zh: "编导实习"
     },
-    time: "2024",
+    time: {
+      en: "2023",
+      zh: "2023"
+    },
     logo: "SRT",
     logoSrc: "/media/logo-sichuan-tv.png",
     bullets: {
       en: [
-        "Supported program material organization, interview script handling, and subtitle review.",
-        "Assisted with field production coordination, content preparation, and basic risk checks.",
+        "Organized program materials, processed interview scripts, and reviewed subtitles.",
+        "Coordinated field production, prepared content, and carried out basic risk checks.",
         "Built familiarity with traditional media production and pre-publication review workflows."
       ],
-      zh: ["参与节目素材整理、采访稿处理与字幕审核。", "协助外采沟通、内容制作与基础风控。", "熟悉传统媒体内容生产流程与发布前审核逻辑。"]
+      zh: ["整理节目素材、处理采访稿并审核字幕。", "协调外采沟通、制作内容并开展基础风控。", "熟悉传统媒体内容生产流程与发布前审核逻辑。"]
     }
   }
 ] as const;
@@ -240,7 +250,7 @@ export const whatIDid = [
       en: "Street-interview content and the “藏夜” case ↗",
       zh: "街访短视频与「藏夜」案例 ↗"
     },
-    year: "2024 / 2025"
+    year: "2024"
   },
   {
     name: {
@@ -251,7 +261,7 @@ export const whatIDid = [
       en: "Cover News / Sichuan Radio & Television experience",
       zh: "封面新闻 / 四川广播电视台相关经历"
     },
-    year: "2024"
+    year: "2023 / 2025"
   }
 ] as const;
 
