@@ -264,17 +264,6 @@ export const whatIDid = [
   },
   {
     name: {
-      en: "LUMA Coffee PR Materials",
-      zh: "LUMA Coffee PR Materials"
-    },
-    type: {
-      en: "PR material package ↗",
-      zh: "PR 材料包 ↗"
-    },
-    year: "2026"
-  },
-  {
-    name: {
       en: "TIKI BOOM Content Review",
       zh: "TIKI BOOM 内容项目复盘"
     },
@@ -310,8 +299,8 @@ export const detailContent = {
           body: "A short MP4 demo shows the workflow running from node execution to generated prompts and output."
         },
         {
-          title: "Workflow Logic",
-          flow: ["Account Idea / Brand Input", "GPT-based Planning", "Content Direction", "Reusable Model Prompts", "Video Concept", "Script", "Visual Prompt", "Video Output", "Publishing Copy"]
+          title: "Workflow Architecture",
+          body: "Four connected stages show how human decisions, model reasoning, and workflow automation move from an initial brief to publishing and iteration."
         },
         {
           title: "Output Examples",
@@ -332,8 +321,13 @@ export const detailContent = {
           ]
         },
         {
-          title: "Reflection",
-          body: "The current version demonstrates the complete workflow structure and selected outputs. Further iterations focus on testing repeatability across more brand inputs."
+          title: "Design Thinking",
+          subtitle: "How this workflow evolved through iteration.",
+          principles: [
+            ["Human decisions remain central.", "AI can generate scripts, prompts, and video outputs, but account positioning, content direction, and final quality judgement still require human decisions. The workflow therefore keeps human checkpoints instead of pursuing full automation."],
+            ["Modular workflows are easier to maintain.", "Many tasks initially sat inside a single GPT conversation. They were later separated into input, decision, production, and publishing-and-iteration stages, allowing each part to be adjusted or replaced independently."],
+            ["Automation should reduce repetition, not replace thinking.", "The purpose of the workflow is not to automate creative judgement. It is to move repetitive and standardised execution to models and workflow tools, while people retain responsibility for direction and quality."]
+          ]
         }
       ],
       zh: [
@@ -346,8 +340,8 @@ export const detailContent = {
           body: "短 MP4 demo 展示了工作流从节点运行到提示词与结果产出的过程。"
         },
         {
-          title: "工作流逻辑",
-          flow: ["账号想法 / 品牌输入", "GPT 沟通账号规划", "内容方向判断", "大模型提示词生成", "短视频选题", "脚本生成", "画面提示词", "视频生成 / 成片预览", "发布文案"]
+          title: "自动化工作流架构",
+          body: "四个连续阶段展示人工判断、模型协作与工作流执行如何从初始输入推进到发布与迭代。"
         },
         {
           title: "输出示例",
@@ -368,8 +362,13 @@ export const detailContent = {
           ]
         },
         {
-          title: "复盘",
-          body: "当前版本已经展示完整工作流结构和部分真实输出，后续迭代重点是用更多品牌输入验证流程的可复用性。"
+          title: "设计思考",
+          subtitle: "这个工作流是如何在迭代中形成的。",
+          principles: [
+            ["人的判断仍然是流程核心", "AI 能够生成脚本、提示词和视频输出，但账号定位、内容方向和最终质量判断仍需要由人完成。因此，工作流没有追求完全自动化，而是保留关键的人工作业节点。"],
+            ["模块化比长对话更容易维护", "早期很多任务集中在一次 GPT 对话中，后续逐渐拆分为输入、决策、生成和发布迭代四个阶段。模块化后，每一阶段都能单独调整，也更方便替换模型、Prompt 或工作流节点。"],
+            ["自动化减少重复执行，而不是替代思考", "这个工作流的目标不是让 AI 代替创意判断，而是把高频、重复、标准化的执行任务交给模型和工作流，让人把注意力放在方向、质量和最终决策上。"]
+          ]
         }
       ]
     }
@@ -382,8 +381,8 @@ export const detailContent = {
           body: "This project set shows how I use GPT to clarify ideas, make project decisions, and turn those decisions into actionable Codex instructions for building lightweight prototypes and portfolio materials."
         },
         {
-          title: "GPT-to-Codex Workflow",
-          flow: ["Raw Idea", "GPT Discussion", "Shared Decision-making", "Codex Instructions", "Prototype Build", "Interaction Demo", "Review & Iteration"]
+          title: "Collaboration Model",
+          body: "A repeated DEFINE, DECIDE, BUILD, and REVIEW loop connects human judgement, model reasoning, and implementation."
         },
         {
           title: "Prototype Demos",
@@ -409,8 +408,13 @@ export const detailContent = {
           ]
         },
         {
-          title: "Reflection",
-          body: "The current collection combines live demos, interface screenshots, PR materials, and this portfolio build to document the GPT-to-Codex collaboration process."
+          title: "Design Thinking",
+          subtitle: "Principles behind the GPT–Codex collaboration process.",
+          principles: [
+            ["AI implements, humans define.", "The most important decisions happen before coding begins: what problem is being solved, who it is for, and what success should look like. Codex can accelerate implementation, but these definitions must come from human judgement."],
+            ["Better prompts begin with better understanding.", "Initial requirements are rarely complete. Testing exposes new needs, which then reshape the product logic, interaction design, and the instructions given to Codex. A prompt is not a one-time input, but a temporary expression of the current understanding."],
+            ["Human judgement remains the final layer.", "Models can suggest options and Codex can implement them, but the final decisions about usefulness, clarity, quality, and product direction remain human responsibilities."]
+          ]
         }
       ],
       zh: [
@@ -419,8 +423,8 @@ export const detailContent = {
           body: "这一组项目展示了我如何在实际项目中使用 GPT 澄清想法、共同决策，并将确定后的方案转化为 Codex 可执行指令，最终完成轻量产品原型和作品材料的搭建。"
         },
         {
-          title: "GPT-to-Codex 流程",
-          flow: ["模糊想法", "GPT 沟通", "共同决策", "Codex 指令", "原型搭建", "交互演示", "复盘迭代"]
+          title: "协作模型",
+          body: "通过定义、决策、搭建与审查的持续闭环，连接人的判断、模型推理与实现工具。"
         },
         {
           title: "原型演示",
@@ -440,8 +444,13 @@ export const detailContent = {
           points: ["需求澄清：把模糊想法整理成明确功能。", "项目判断：决定哪些功能先做，哪些功能暂缓。", "AI 协作：用 GPT 做讨论与决策，用 Codex 执行搭建。", "指令设计：将方案转化为清晰、可执行的 Codex 任务。", "原型落地：把想法做成可点击、可交互、有结果的轻量产品。"]
         },
         {
-          title: "复盘",
-          body: "当前项目合集通过公开 Demo、界面截图、PR 材料和作品集网站本身，记录 GPT-to-Codex 协作与落地过程。"
+          title: "设计思考",
+          subtitle: "GPT–Codex 协作过程背后的设计原则。",
+          principles: [
+            ["AI 负责实现，人负责定义问题。", "真正重要的决策发生在写代码之前：要解决什么问题、服务谁，以及什么结果才算成功。Codex 可以加速实现，但这些定义必须来自人的判断。"],
+            ["更好的 Prompt，始于对需求更深入的理解。", "初始需求通常并不完整。实际测试会暴露新的问题，再推动产品逻辑、交互设计和 Codex 指令持续调整。Prompt 不是一次写完的输入，而是当前需求理解的阶段性表达。"],
+            ["最终判断始终属于人。", "模型可以提出方案，Codex 可以完成实现，但关于实用性、清晰度、质量和产品方向的最终取舍，始终需要由人完成。"]
+          ]
         }
       ]
     }
