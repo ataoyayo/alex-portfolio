@@ -170,14 +170,26 @@ export const experiences = [
     logoSrc: "/media/logo-cover-news.png",
     bullets: {
       en: [
-        "Monitored overseas news developments, screened story leads, and assessed communication value.",
-        "Coordinated international news livestream preparation and event execution, and produced video edits.",
-        "Developed a four-dimension screening approach to improve topic selection efficiency."
+        {
+          text: "Monitored overseas news trends, screened story leads, and assessed communication value.",
+          emphasis: null
+        },
+        {
+          text: "Prepared and executed international news livestreams and related events, producing supporting video content.",
+          emphasis: null
+        },
+        {
+          text: "Built a four-factor lead evaluation framework, improving lead screening efficiency by approximately 40%.",
+          emphasis: "improving lead screening efficiency by approximately 40%"
+        }
       ],
       zh: [
-        "开展海外热点监测、线索筛选与传播价值判断。",
-        "筹备与执行国际新闻直播及活动，并制作视频内容。",
-        "建立四维度线索研判思路，提高新闻线索筛选效率。"
+        { text: "监测海外热点，筛选新闻线索并评估传播价值。", emphasis: null },
+        { text: "筹备并执行国际新闻直播及相关活动，完成视频内容制作。", emphasis: null },
+        {
+          text: "搭建四维度线索研判框架，提升约 40% 新闻线索筛选效率。",
+          emphasis: "提升约 40% 新闻线索筛选效率"
+        }
       ]
     }
   },
@@ -198,11 +210,27 @@ export const experiences = [
     logoSrc: "/media/logo-sichuan-tv.png",
     bullets: {
       en: [
-        "Organized program materials, processed interview scripts, and reviewed subtitles.",
-        "Coordinated field production, prepared content, and carried out basic risk checks.",
-        "Built familiarity with traditional media production and pre-publication review workflows."
+        {
+          text: "Organized program materials, processed interview scripts, and maintained zero subtitle review errors.",
+          emphasis: "zero subtitle review errors"
+        },
+        {
+          text: "Coordinated field-production communication, advanced content preparation, and conducted basic risk checks.",
+          emphasis: null
+        },
+        {
+          text: "Followed content production and pre-publication review workflows with zero process errors in assigned tasks.",
+          emphasis: "zero process errors in assigned tasks"
+        }
       ],
-      zh: ["整理节目素材、处理采访稿并审核字幕。", "协调外采沟通、制作内容并开展基础风控。", "熟悉传统媒体内容生产流程与发布前审核逻辑。"]
+      zh: [
+        { text: "整合节目素材，处理采访稿并完成 0 差错字幕审核。", emphasis: "0 差错字幕审核" },
+        { text: "对接外采沟通，推进内容制作并执行基础风险检查。", emphasis: null },
+        {
+          text: "跟进内容生产与发布前审核流程，实现基础流程 0 失误。",
+          emphasis: "基础流程 0 失误"
+        }
+      ]
     }
   }
 ] as const;

@@ -102,7 +102,17 @@ export function HomePage({ locale }: HomePageProps) {
                 <h4>{experience.role[locale]}</h4>
                 <ul>
                   {experience.bullets[locale].map((bullet) => (
-                    <li key={bullet}>{bullet}</li>
+                    <li key={bullet.text}>
+                      {bullet.emphasis ? (
+                        <>
+                          {bullet.text.slice(0, bullet.text.indexOf(bullet.emphasis))}
+                          <strong>{bullet.emphasis}</strong>
+                          {bullet.text.slice(bullet.text.indexOf(bullet.emphasis) + bullet.emphasis.length)}
+                        </>
+                      ) : (
+                        bullet.text
+                      )}
+                    </li>
                   ))}
                 </ul>
               </div>
