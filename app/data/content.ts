@@ -104,24 +104,24 @@ export const projects = [
     slug: "codex-projects",
     size: "normal",
     previewType: {
-      en: "Alex, GPT and Codex collaboration loop",
-      zh: "Alex、GPT 与 Codex 协作闭环"
+      en: "CareerFit and Medical Diet product prototypes",
+      zh: "CareerFit 与 Medical Diet 产品原型"
     },
     title: {
-      en: "Codex Projects",
-      zh: "Codex 项目"
+      en: "CareerFit & Medical Diet AI Products",
+      zh: "CareerFit 与 Medical Diet AI 产品原型"
     },
     summary: {
-      en: "Lightweight prototypes built by turning GPT-based project decisions into actionable Codex instructions.",
-      zh: "通过 GPT 澄清想法、共同决策，再将方案转化为 Codex 指令，完成轻量产品原型搭建。"
+      en: "Two 0-to-1 AI-assisted product prototypes for career support and diet-restriction management, covering user needs, feature planning, MVP design, implementation, and iteration.",
+      zh: "围绕求职辅助与饮食限制管理两类真实场景，完成用户需求分析、功能规划、MVP 设计、原型搭建与迭代。"
     },
     detailSubtitle: {
-      en: "From GPT-based decisions to Codex-built prototypes.",
-      zh: "从 GPT 共同决策到 Codex 原型搭建。"
+      en: "From user needs and product decisions to working AI-assisted prototypes.",
+      zh: "从用户需求与产品决策，到可运行的 AI 辅助产品原型。"
     },
     meta: {
-      en: ["GPT-to-Codex", "Prototype Builds", "2026"],
-      zh: ["GPT-to-Codex", "原型搭建", "2026"]
+      en: ["AI Product", "0-to-1 Prototyping", "2026"],
+      zh: ["AI 产品", "0-1 原型搭建", "2026"]
     }
   },
   {
@@ -251,12 +251,12 @@ export const whatIDid = [
   },
   {
     name: {
-      en: "Codex Projects",
-      zh: "Codex 项目合集"
+      en: "CareerFit & Medical Diet AI Products",
+      zh: "CareerFit 与 Medical Diet AI 产品原型"
     },
     type: {
-      en: "Lightweight prototypes and project builds ↗",
-      zh: "轻量产品原型与项目搭建 ↗"
+      en: "Career support and diet-management prototypes ↗",
+      zh: "求职辅助与饮食管理产品原型 ↗"
     },
     year: "2026"
   },
@@ -376,7 +376,7 @@ export const detailContent = {
       en: [
         {
           title: "Overview",
-          body: "This project set shows how I use GPT to clarify ideas, make project decisions, and turn those decisions into actionable Codex instructions for building lightweight prototypes and portfolio materials."
+          body: "This project set presents two 0-to-1 AI-assisted product prototypes: CareerFit AI Assistant for career support and Medical Diet Restriction Demo for diet-restriction management. Both projects move from user scenarios and requirement analysis to feature planning, MVP design, implementation, and iterative validation."
         },
         {
           title: "Collaboration Model",
@@ -385,8 +385,8 @@ export const detailContent = {
         {
           title: "Prototype Demos",
           cards: [
+            ["CareerFit AI Assistant", "An AI-assisted career product prototype that matches job requirements with relevant personal experiences, supporting resume optimisation, interview preparation, and portfolio content selection."],
             ["Medical Diet Restriction Record Demo", "A public beta web prototype for recording meals and estimating nutrition intake under user-entered medical diet restrictions."],
-            ["Job Matching Tool", "A lightweight career-support tool that matches job requirements with relevant personal experiences for resume editing, interview preparation, and portfolio content selection."],
             ["LUMA Coffee PR Materials", "A PR and social media campaign package for a Wellington pilot launch, including campaign framing, audience thinking, local market observation, and PR execution materials."],
             ["Portfolio Website", "This portfolio website itself is also a result of GPT-based decision-making and Codex-based implementation, showing the full process from positioning and structure to visual direction and page building."]
           ]
@@ -418,7 +418,7 @@ export const detailContent = {
       zh: [
         {
           title: "项目概览",
-          body: "这一组项目展示了我如何在实际项目中使用 GPT 澄清想法、共同决策，并将确定后的方案转化为 Codex 可执行指令，最终完成轻量产品原型和作品材料的搭建。"
+          body: "这一组项目重点展示两个从 0 到 1 搭建的 AI 辅助产品原型：面向求职场景的 CareerFit AI Assistant，以及面向饮食限制管理场景的 Medical Diet Restriction Demo。两个项目均从用户场景与需求分析出发，推进功能规划、MVP 设计、原型实现与迭代验证。"
         },
         {
           title: "协作模型",
@@ -427,8 +427,8 @@ export const detailContent = {
         {
           title: "原型演示",
           cards: [
+            ["CareerFit AI Assistant", "面向求职用户的 AI 辅助产品原型，将岗位要求与个人经历进行匹配，用于支持简历优化、面试准备和作品集内容选择。"],
             ["医嘱限制饮食记录与营养估算 Demo", "一个 public beta Web 原型工具，帮助用户在主动录入医生或营养师饮食限制后，记录食材、菜品、用油和家庭分食情况，并估算核心营养素摄入。"],
-            ["工作经历匹配工具", "一个将岗位要求与个人经历进行匹配的轻量求职辅助工具，用于辅助简历修改、面试准备和作品集内容选择。"],
             ["LUMA Coffee PR Materials", "一组围绕惠灵顿试点上市场景整理的 PR 与社交媒体传播材料，包含 campaign framing、目标受众、本地观察和 PR 执行材料。"],
             ["作品集网站本身", "这个作品集网站本身也是 GPT 共同决策与 Codex 执行搭建的结果，用来展示从定位、结构、视觉到页面实现的完整协作流程。"]
           ]

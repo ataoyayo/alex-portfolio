@@ -564,7 +564,7 @@ function renderSectionContent(section: DetailSection, locale: Locale, slug: keyo
             slug === "codex-projects" &&
             (title === "Medical Diet Restriction Record Demo" || title === "医嘱限制饮食记录与营养估算 Demo");
           const isJobMatching =
-            slug === "codex-projects" && (title === "Job Matching Tool" || title === "工作经历匹配工具");
+            slug === "codex-projects" && title === "CareerFit AI Assistant";
           const isLuma = slug === "codex-projects" && title === "LUMA Coffee PR Materials";
           const isFeatured = isMedicalDiet || isJobMatching || isLuma;
 
