@@ -9,23 +9,30 @@ export const languageLabel: Record<Locale, string> = {
 
 export const homeContent = {
   en: {
-    badge: "Alex",
+    badge: "A Tao",
     nav: {
-      projects: "Projects",
       experience: "Experience",
+      caseStudy: "Case Study",
+      projects: "Projects",
+      skills: "Skills",
+      about: "About",
       contact: "Contact"
     },
     hero: {
-      title: "Hi there, I’m Alex.",
-      titleLines: ["Hi there,", "I’m Alex."],
-      description: "Communication projects, content experiments, media practice, and AI workflows.",
-      university: "Massey University",
-      degree: "Master of Management — Communication ↗",
+      title: "A Tao",
+      titleLines: ["A Tao"],
+      description: "Gaming Marketing · Community · Creator Operations",
+      supporting: "Gaming, content, creator collaboration and AI-driven projects.",
       issue: "PORTFOLIO / 2026",
-      cta: "View projects"
+      primaryCta: "View Experience",
+      secondaryCta: "View Projects"
     },
+    experienceTitle: "Experience.",
+    experienceSubtitle: "Hands-on experience across gaming community operations, creator collaboration and international media projects.",
+    caseStudyTitle: "Featured Case Study.",
+    caseStudySubtitle: "An independent analysis completed during my Lilith Games internship, based on public game content and clearly labelled player-side estimates.",
     projectsTitle: "Selected Projects.",
-    projectsSubtitle: "Three project directions that show how I turn ideas, media practice, and AI collaboration into concrete outputs.",
+    projectsSubtitle: "Independent content, AI product and workflow projects that show how I turn an idea into a usable output.",
     proofTitle: "Proof Strip",
     proofItems: [
       "0-to-1 AI Workflow",
@@ -33,43 +40,56 @@ export const homeContent = {
       "Short-form Content Practice",
       "Media & Communication Background"
     ],
-    experienceTitle: "Experience.",
-    whatTitle: "What I Did.",
+    skillsTitle: "Skills.",
+    skillsSubtitle: "A concise view of the capabilities I use across gaming, content and AI-assisted work.",
+    aboutTitle: "About / Background.",
+    aboutBody: "Master of Management (Communication) candidate at Massey University, with experience across gaming community operations, content, creator collaboration and AI projects. Based between China and New Zealand, working in Mandarin and English.",
     footer: {
-      name: "alex-portfolio/",
-      line: "Built with GPT, Codex, and personal project practice.",
-      closing: "More projects coming.",
+      name: "A Tao",
+      line: "Open to opportunities in gaming marketing, creator operations, community and global publishing.",
+      closing: "China · New Zealand · Remote",
       linkedin: "LinkedIn ↗",
+      github: "GitHub ↗",
       email: "Email ↗"
     }
   },
   zh: {
     badge: "阿涛",
     nav: {
-      projects: "项目",
       experience: "经历",
+      caseStudy: "案例",
+      projects: "项目",
+      skills: "技能",
+      about: "关于",
       contact: "联系"
     },
     hero: {
-      title: "你好，我是阿涛。",
-      titleLines: ["你好，", "我是阿涛。"],
-      description: "传播项目、内容、媒体实践与 AI 工作流。",
-      university: "梅西大学",
-      degree: "传播硕士 ↗",
+      title: "阿涛",
+      titleLines: ["阿涛"],
+      description: "游戏营销 · 社区运营 · 创作者运营",
+      supporting: "聚焦游戏、内容、创作者协作与 AI 驱动项目。",
       issue: "个人作品集 / 2026",
-      cta: "查看项目"
+      primaryCta: "查看经历",
+      secondaryCta: "查看项目"
     },
+    experienceTitle: "经历。",
+    experienceSubtitle: "涵盖游戏社区运营、创作者协作与国际新闻内容项目的实践经历。",
+    caseStudyTitle: "重点案例。",
+    caseStudySubtitle: "在莉莉丝实习期间完成的独立分析，基于公开游戏内容，并对玩家侧测算进行明确标注。",
     projectsTitle: "精选项目。",
-    projectsSubtitle: "三个方向展示我如何把想法、媒体实践与 AI 协作转化为具体作品。",
+    projectsSubtitle: "通过独立内容、AI 产品和工作流项目，展示我如何把想法转化为可使用的产出。",
     proofTitle: "能力证据条",
     proofItems: ["0-1 AI 工作流", "GPT-to-Codex 原型搭建", "短视频内容实践", "媒体与传播背景"],
-    experienceTitle: "经历。",
-    whatTitle: "成果。",
+    skillsTitle: "技能。",
+    skillsSubtitle: "快速了解我在游戏、内容和 AI 协作中的核心能力。",
+    aboutTitle: "关于 / 背景。",
+    aboutBody: "新西兰梅西大学管理学（传播方向）硕士在读，拥有游戏社区运营、内容、创作者协作和 AI 项目经验。往返于中国与新西兰，可使用中英文工作。",
     footer: {
-      name: "atao-portfolio/",
-      line: "由 GPT 共同决策、Codex 辅助搭建，并基于个人项目实践完成。",
-      closing: "更多项目持续更新。",
+      name: "A Tao",
+      line: "正在寻找游戏营销、创作者运营、社区运营与全球发行方向的机会。",
+      closing: "中国 · 新西兰 · 远程",
       linkedin: "LinkedIn ↗",
+      github: "GitHub ↗",
       email: "Email ↗"
     }
   }
@@ -77,32 +97,8 @@ export const homeContent = {
 
 export const projects = [
   {
-    slug: "ai-short-form-video-workflow",
-    size: "large",
-    previewType: {
-      en: "Alex to GPT to Coze workflow",
-      zh: "Alex 到 GPT 到 Coze 工作流"
-    },
-    title: {
-      en: "AI Short-form Video Workflow",
-      zh: "AI 短视频自动化工作流"
-    },
-    summary: {
-      en: "A repeatable workflow for turning brand inputs into short-form video concepts, scripts, visual prompts, and publishable video outputs.",
-      zh: "一套将品牌输入转化为短视频选题、脚本、视觉提示词和可发布视频产出的自动化工作流。"
-    },
-    detailSubtitle: {
-      en: "From brand input to publishable video output.",
-      zh: "从品牌输入到可发布视频产出。"
-    },
-    meta: {
-      en: ["AI Workflow", "Short-form Video", "2026"],
-      zh: ["AI 工作流", "短视频", "2026"]
-    }
-  },
-  {
     slug: "codex-projects",
-    size: "normal",
+    size: "large",
     previewType: {
       en: "CareerFit and Medical Diet product prototypes",
       zh: "CareerFit 与 Medical Diet 产品原型"
@@ -125,6 +121,30 @@ export const projects = [
     }
   },
   {
+    slug: "ai-short-form-video-workflow",
+    size: "normal",
+    previewType: {
+      en: "A Tao to GPT to Coze workflow",
+      zh: "A Tao 到 GPT 到 Coze 工作流"
+    },
+    title: {
+      en: "AI Short-form Video Workflow",
+      zh: "AI 短视频自动化工作流"
+    },
+    summary: {
+      en: "A repeatable workflow for turning brand inputs into short-form video concepts, scripts, visual prompts, and publishable video outputs.",
+      zh: "一套将品牌输入转化为短视频选题、脚本、视觉提示词和可发布视频产出的自动化工作流。"
+    },
+    detailSubtitle: {
+      en: "From brand input to publishable video output.",
+      zh: "从品牌输入到可发布视频产出。"
+    },
+    meta: {
+      en: ["AI Workflow", "Short-form Video", "2026"],
+      zh: ["AI 工作流", "短视频", "2026"]
+    }
+  },
+  {
     slug: "tiki-boom",
     size: "normal",
     previewType: {
@@ -132,24 +152,24 @@ export const projects = [
       zh: "街访内容项目拼贴"
     },
     title: {
-      en: "TIKI BOOM Street Interview Project",
-      zh: "TIKI BOOM 街头采访内容项目"
+      en: "Content Growth & Influencer Marketing",
+      zh: "内容增长与达人营销"
     },
     summary: {
-      en: "A nightlife short-form content project covering topic design, KOL/guest screening, interview execution, editing, publishing, and the featured “藏夜” case.",
-      zh: "围绕酒吧夜间场景展开的短视频内容实践，涵盖话题设计、KOL/嘉宾筛选、采访执行、剪辑发布与「藏夜」经典案例。"
+      en: "A five-month short-form content project covering format development, creator screening, outreach, scheduling, collaboration terms, publishing and performance iteration.",
+      zh: "一项持续 5 个月的短视频内容项目，涵盖栏目形式、达人筛选、邀约沟通、档期协调、合作条件、发布与数据迭代。"
     },
     detailSubtitle: {
-      en: "Nightlife content practice, guest collaboration, and the featured “藏夜” case.",
-      zh: "夜生活场景下的内容实践、嘉宾协作与「藏夜」经典案例。"
+      en: "Short-form content growth, creator collaboration and performance-led iteration.",
+      zh: "短视频内容增长、达人协作与数据驱动迭代。"
     },
     meta: {
-      en: ["Short-form Content", "Street Interview", "2024"],
-      zh: ["短视频内容", "街头采访", "2024"]
+      en: ["Content Growth", "Influencer Marketing", "2024"],
+      zh: ["内容增长", "达人营销", "2024"]
     },
     homeMeta: {
-      en: ["Short-form Content", "Street Interview", "2024"],
-      zh: ["短视频内容", "街头采访", "2024"]
+      en: ["~250 Videos / 5 Months", "3 KOLs + 20 KOCs", "2024"],
+      zh: ["约 250 条视频 / 5 个月", "3 位 KOL + 20 位 KOC", "2024"]
     }
   }
 ] as const;
@@ -157,85 +177,112 @@ export const projects = [
 export const experiences = [
   {
     company: {
+      en: "Lilith Games",
+      zh: "莉莉丝游戏"
+    },
+    role: {
+      en: "Community Operations Intern · Xiaobingbing Legend (Classic Server)",
+      zh: "社区运营实习生 ·《小冰冰传奇》怀旧服"
+    },
+    time: {
+      en: "Jun 2026 – Sep 2026",
+      zh: "2026.06–2026.09"
+    },
+    logo: "LG",
+    caseStudySlug: "anniversary-version-monetization-analysis",
+    bullets: {
+      en: [
+        {
+          text: "Supported daily community operations across official forums and player groups, producing version guides, event announcements and developer Q&A content around major updates.",
+          emphasis: null
+        },
+        {
+          text: "Supported creator/KOL collaboration across Bilibili and Douyin through screening, brief communication and publishing follow-up; community campaigns reached 5,000+ total participations and contributed to a 20% increase in new community registrations during the version period.",
+          emphasis: "5,000+ total participations"
+        },
+        {
+          text: "Segmented players into five groups by spending depth and progression, and tracked community activity, campaign participation and monetization feedback to support post-campaign analysis.",
+          emphasis: "five groups"
+        }
+      ],
+      zh: [
+        { text: "支持官方社区与玩家群的日常运营，围绕重要版本更新产出版本攻略、活动预告与开发者问答内容。", emphasis: null },
+        { text: "协助 B 站、抖音游戏 KOL 合作，参与达人筛选、Brief 沟通与发布跟进；社区活动总参与人次超 5,000，版本期间新增社区注册用户增长 20%。", emphasis: "超 5,000" },
+        { text: "按付费深度与养成进度将玩家梳理为五类，并跟踪社区活跃、活动参与和付费反馈，支持活动后复盘。", emphasis: "五类" }
+      ]
+    }
+  },
+  {
+    company: {
       en: "Cover News",
       zh: "封面新闻"
     },
     role: {
-      en: "International News & Content Intern",
-      zh: "国际新闻与内容执行实习"
+      en: "Operations Intern",
+      zh: "运营实习生"
     },
     time: {
-      en: "Nov 2025 – Feb 2026",
-      zh: "2025.11–2026.02"
+      en: "Nov 2025 – Mar 2026",
+      zh: "2025.11–2026.03"
     },
     logo: "CN",
     logoSrc: "/media/logo-cover-news.png",
     bullets: {
       en: [
         {
-          text: "Monitored overseas news trends, screened story leads, and assessed communication value.",
-          emphasis: null
+          text: "Supported 20+ international news live broadcasts, remote interviews and media projects through content checks, process follow-up and cross-team coordination.",
+          emphasis: "20+ international news"
         },
         {
-          text: "Prepared and executed international news livestreams and related events, producing supporting video content.",
-          emphasis: null
+          text: "Produced and edited short-form video content; top-performing content reached 78K+ views.",
+          emphasis: "78K+ views"
         },
         {
-          text: "Built a four-factor lead evaluation framework, improving lead screening efficiency by approximately 40%.",
-          emphasis: "improving lead screening efficiency by approximately 40%"
+          text: "Used ChatGPT and Kimi for initial information extraction and structured summaries, followed by manual verification.",
+          emphasis: null
         }
       ],
       zh: [
-        { text: "监测海外热点，筛选新闻线索并评估传播价值。", emphasis: null },
-        { text: "筹备并执行国际新闻直播及相关活动，完成视频内容制作。", emphasis: null },
-        {
-          text: "搭建四维度线索研判框架，提升约 40% 新闻线索筛选效率。",
-          emphasis: "提升约 40% 新闻线索筛选效率"
-        }
-      ]
-    }
-  },
-  {
-    company: {
-      en: "Sichuan Radio & Television",
-      zh: "四川广播电视台"
-    },
-    role: {
-      en: "Production Intern",
-      zh: "编导实习"
-    },
-    time: {
-      en: "2023",
-      zh: "2023"
-    },
-    logo: "SRT",
-    logoSrc: "/media/logo-sichuan-tv.png",
-    bullets: {
-      en: [
-        {
-          text: "Organized program materials, processed interview scripts, and maintained zero subtitle review errors.",
-          emphasis: "zero subtitle review errors"
-        },
-        {
-          text: "Coordinated field-production communication, advanced content preparation, and conducted basic risk checks.",
-          emphasis: null
-        },
-        {
-          text: "Followed content production and pre-publication review workflows with zero process errors in assigned tasks.",
-          emphasis: "zero process errors in assigned tasks"
-        }
-      ],
-      zh: [
-        { text: "整合节目素材，处理采访稿并完成 0 差错字幕审核。", emphasis: "0 差错字幕审核" },
-        { text: "对接外采沟通，推进内容制作并执行基础风险检查。", emphasis: null },
-        {
-          text: "跟进内容生产与发布前审核流程，实现基础流程 0 失误。",
-          emphasis: "基础流程 0 失误"
-        }
+        { text: "通过内容核对、流程跟进和跨团队协调，支持 20+ 场国际新闻直播、远程连线与媒体项目。", emphasis: "20+ 场" },
+        { text: "制作并剪辑短视频内容，单条内容最高获得 7.8 万+播放。", emphasis: "7.8 万+播放" },
+        { text: "使用 ChatGPT 和 Kimi 进行初步信息提取与结构化摘要，再完成人工核验。", emphasis: null }
       ]
     }
   }
 ] as const;
+
+export const skillGroups = [
+  {
+    title: { en: "Gaming & Marketing", zh: "游戏与营销" },
+    items: {
+      en: ["Community Operations", "Influencer/KOL Collaboration", "Campaign Execution", "User Segmentation", "Performance Analysis"],
+      zh: ["社区运营", "达人 / KOL 协作", "活动执行", "用户分层", "数据复盘"]
+    }
+  },
+  {
+    title: { en: "Content", zh: "内容" },
+    items: { en: ["Content Strategy", "Short-form Video", "Copywriting", "Video Editing"], zh: ["内容策略", "短视频", "文案写作", "视频剪辑"] }
+  },
+  {
+    title: { en: "Platforms", zh: "平台" },
+    items: { en: ["Bilibili", "Douyin", "WeChat"], zh: ["B 站", "抖音", "微信"] }
+  },
+  {
+    title: { en: "Data & AI", zh: "数据与 AI" },
+    items: { en: ["Excel", "SQL (Basic)", "AI-assisted Research", "Workflow Design"], zh: ["Excel", "SQL（基础）", "AI 辅助研究", "工作流设计"] }
+  }
+] as const;
+
+export const featuredCaseStudy = {
+  slug: "anniversary-version-monetization-analysis",
+  previewType: { en: "Independent commercial analysis", zh: "独立商业化分析" },
+  title: { en: "Anniversary Version Monetization Analysis", zh: "周年庆版本商业化拆解" },
+  subtitle: { en: "Xiaobingbing Legend Classic Server", zh: "《小冰冰传奇》怀旧服" },
+  label: { en: "Independent analysis completed during internship", zh: "实习期间完成的独立分析" },
+  finding: { en: "Short-term hero monetization + long-term progression monetization", zh: "短期新英雄付费 + 长期养成付费" },
+  cta: { en: "View Case Study →", zh: "查看完整案例 →" },
+  meta: { en: ["Game Monetization", "Player Segmentation", "2026"], zh: ["游戏商业化", "用户分层", "2026"] }
+} as const;
 
 export const whatIDid = [
   {
@@ -285,6 +332,148 @@ export const whatIDid = [
 ] as const;
 
 export const detailContent = {
+  "anniversary-version-monetization-analysis": {
+    sections: {
+      en: [
+        {
+          title: "Overview",
+          body: "This independent case study examines how an anniversary version connected a new long-term progression system, a limited-cycle hero and short-cycle activities. It was completed during my Lilith Games internship and is presented as my own analysis, not as an official Lilith internal report."
+        },
+        {
+          title: "Business Question",
+          body: "How can one version balance engagement, monetization and resource circulation while serving players with different progression goals and resource coverage?"
+        },
+        {
+          title: "Version Structure",
+          cards: [
+            ["Long-term progression", "The Scepter system and Divine Realm Maze create cross-version progression and sustained resource demand."],
+            ["Short-term hero monetization", "The anniversary hero Roshan concentrates acquisition, repeat-pull and star-up demand within the hero cycle."],
+            ["Engagement & circulation", "Short-cycle modes and events maintain participation, supply regular resources and create resource conversion or consumption points."]
+          ]
+        },
+        {
+          title: "Player Segmentation",
+          cards: [
+            ["F2P", "Selectively acquires priority heroes across versions and advances Scepters over a longer horizon."],
+            ["Monthly Pass", "Can generally cover baseline hero acquisition, then prioritises one core progression target."],
+            ["Monthly Pass + Battle Pass", "Retains more flexibility after baseline acquisition for star-ups, Scepters or the next cycle."],
+            ["Mid-spender", "Moves beyond acquisition into star-ups and multiple core Scepter targets."],
+            ["High-spender", "Selectively develops high-star heroes and several high-value progression targets."],
+            ["Whale", "Pursues full collection, full progression and the version’s supply ceiling."]
+          ]
+        },
+        {
+          title: "Monetization Structure",
+          cards: [
+            ["Short-term", "Hero launch → acquisition → repeat pulls → star upgrades"],
+            ["Long-term", "Free progression → resource gap → paid acceleration → progression milestones"]
+          ]
+        },
+        {
+          title: "Commercial Loop",
+          flow: ["Trigger", "Amplifier", "Validation"]
+        },
+        {
+          title: "Key Findings",
+          points: [
+            "The version combines short-term hero monetization with long-term progression monetization.",
+            "Roshan concentrates current-cycle acquisition and star-up demand; Scepters extend progression and resource consumption across versions.",
+            "New hero and progression goals trigger demand, resource gaps and product ladders amplify it, and PVP, ranking and visible rewards validate the investment."
+          ]
+        },
+        {
+          title: "Recommendations",
+          points: [
+            "Make 3-star acquisition usable, position 4-star as the clearest value step, and retain 5-star as a high-investment goal.",
+            "Use low-price random exploration to serve trial-oriented payers, while keeping deterministic products for players who want assured progression.",
+            "Proposed concepts: an RMB 18 random exploration pack, an RMB 388 single-hero stage pack and an RMB 688 two-hero stage pack. These are user recommendations, not live products.",
+            "Maintain continuity after high-value limited packs through staged recharge rewards, added progression resources and visible milestone feedback."
+          ]
+        },
+        {
+          title: "Reflection",
+          body: "Monetization is not only about selling bundles; it connects player goals, resource gaps, progression milestones and product ladders."
+        },
+        {
+          title: "Source Notes",
+          points: [
+            "The approximate 21-day hero cycle and free-resource coverage figures are community-sourced/player-reported estimates, not official fixed outputs.",
+            "The 3,000+ key sample, average key consumption and first-launch key coverage are player-side statistics and estimates.",
+            "All RMB 18 / 388 / 688 product concepts are proposed optimisation ideas and were not presented as launched products."
+          ]
+        }
+      ],
+      zh: [
+        {
+          title: "概览",
+          body: "这份独立案例研究周年庆版本如何连接长期养成系统、限时英雄与短周期活动。报告在莉莉丝游戏实习期间完成，代表个人分析，不是莉莉丝官方内部报告。"
+        },
+        {
+          title: "商业问题",
+          body: "一个版本如何同时平衡活跃、付费与资源循环，并承接不同养成目标和资源覆盖能力的玩家？"
+        },
+        {
+          title: "版本结构",
+          cards: [
+            ["长期养成", "神杖系统与神域迷宫建立跨版本养成，延长资源需求。"],
+            ["短期英雄付费", "周年英雄肉山在新英雄周期内集中承接获取、重复抽取与升星需求。"],
+            ["活跃与循环", "短周期玩法与活动维持参与，补充常规资源，并建立资源转换或消耗入口。"]
+          ]
+        },
+        {
+          title: "玩家分层",
+          cards: [
+            ["0 氪", "跨版本选择性获取核心英雄，长周期推进神杖。"],
+            ["月卡", "基本覆盖基础英雄获取，再优先推进一个核心养成目标。"],
+            ["月卡 + 战令", "完成基础获取后，对升星、神杖或下一版本具有更高灵活度。"],
+            ["中 R", "从英雄获取进入升星与多个核心神杖目标。"],
+            ["大 R", "选择性深养高星英雄与多个高价值养成目标。"],
+            ["超 R", "追求全收集、全养成与版本资源供给上限。"]
+          ]
+        },
+        {
+          title: "商业化结构",
+          cards: [
+            ["短期", "新英雄上线 → 获取 → 重复抽取 → 升星"],
+            ["长期", "免费推进 → 资源缺口 → 付费加速 → 养成里程碑"]
+          ]
+        },
+        {
+          title: "商业化闭环",
+          flow: ["触发", "放大", "验证"]
+        },
+        {
+          title: "核心发现",
+          points: [
+            "版本形成「短期新英雄付费 + 长期养成付费」的双层结构。",
+            "肉山集中承接当期获取与升星需求；神杖将养成与资源消耗延长至跨版本周期。",
+            "新英雄与新养成目标触发需求，资源缺口和商品梯度放大投入，PVP、排名与外显反馈验证价值。"
+          ]
+        },
+        {
+          title: "建议",
+          points: [
+            "保证三星具备实际使用价值，将四星设为更清晰的主要付费提档，五星保留为高投入目标。",
+            "以低价随机探索承接尝试型付费，同时保留确定性商品承接明确养成需求。",
+            "提案概念：18 元随机探索礼包、388 元单英雄阶段礼包与 688 元双英雄阶段礼包。这些是个人建议，并非已上线商品。",
+            "在高价值限购结束后，以阶段累充、附加养成资源与可见里程碑反馈维持高付费承接连续性。"
+          ]
+        },
+        {
+          title: "反思",
+          body: "商业化不只是销售礼包，而是连接玩家目标、资源缺口、养成里程碑与商品梯度。"
+        },
+        {
+          title: "数据口径",
+          points: [
+            "约 21 天英雄周期与免费资源覆盖数据来自社区 / 玩家侧测算，不是官方固定产出。",
+            "3000+ 秘钥样本、平均秘钥消耗与首发资源覆盖为玩家侧统计与推算。",
+            "18 / 388 / 688 元商品均为商业化优化提案，不是已上线商品。"
+          ]
+        }
+      ]
+    }
+  },
   "ai-short-form-video-workflow": {
     sections: {
       en: [

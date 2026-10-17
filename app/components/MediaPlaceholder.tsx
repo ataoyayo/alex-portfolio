@@ -25,7 +25,7 @@ export function MediaPlaceholder({ label, variant = "workflow", imageSrc, imageA
           <div className="workflow-flowline" />
           <div className="workflow-runner" />
           <div className="workflow-step workflow-step--alex">
-            <strong>Alex</strong>
+            <strong>A Tao</strong>
             <span />
           </div>
           <div className="workflow-step workflow-step--gpt">
@@ -65,7 +65,7 @@ export function MediaPlaceholder({ label, variant = "workflow", imageSrc, imageA
               <animateMotion dur="5.2s" repeatCount="indefinite" path="M120 22 L204 138 L36 138 Z" />
             </circle>
           </svg>
-          <span className="collaboration-node collaboration-node--alex">Alex</span>
+          <span className="collaboration-node collaboration-node--alex">A Tao</span>
           <span className="collaboration-node collaboration-node--gpt">GPT</span>
           <span className="collaboration-node collaboration-node--codex">Codex</span>
         </div>

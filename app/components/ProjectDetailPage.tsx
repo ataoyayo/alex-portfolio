@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { detailContent, projects, type Locale } from "../data/content";
+import { detailContent, featuredCaseStudy, projects, type Locale } from "../data/content";
 import { assetPath } from "../lib/assetPath";
 import { ImageLightboxProvider, LightboxImage } from "./ImageLightbox";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -388,7 +388,7 @@ const workflowArchitecture = {
       title: "发布与迭代",
       description: "人工完成最终判断，并将反馈带入下一轮。",
       nodes: [
-        { title: "发布文案", roles: ["gpt", "alex"], body: "生成发布文案后，由 Alex 进行最终调整和确认。" },
+        { title: "发布文案", roles: ["gpt", "alex"], body: "生成发布文案后，由 A Tao 进行最终调整和确认。" },
         { title: "数据观察", roles: ["alex"], body: "观察基础表现、反馈和内容匹配度。" },
         { title: "复盘优化", roles: ["alex", "gpt"], body: "根据实际结果调整方向、Prompt 和工作流节点。" }
       ]
@@ -397,8 +397,8 @@ const workflowArchitecture = {
 } as const;
 
 const roleLabels = {
-  en: { alex: "Human Decision / Alex", gpt: "LLM Reasoning / GPT", coze: "Workflow Automation / Coze" },
-  zh: { alex: "人工判断 / Alex", gpt: "模型协作 / GPT", coze: "工作流执行 / Coze" }
+  en: { alex: "Human Decision / A Tao", gpt: "LLM Reasoning / GPT", coze: "Workflow Automation / Coze" },
+  zh: { alex: "人工判断 / A Tao", gpt: "模型协作 / GPT", coze: "工作流执行 / Coze" }
 } as const;
 
 function WorkflowArchitecture({ locale }: { locale: Locale }) {
@@ -433,16 +433,16 @@ function WorkflowArchitecture({ locale }: { locale: Locale }) {
 function CollaborationModel({ locale }: { locale: Locale }) {
   const nodes = locale === "en"
     ? [
-        ["define", "DEFINE", "Alex", "Clarify the problem, context, constraints, and success criteria."],
-        ["decide", "DECIDE", "Alex + GPT", "Explore possible approaches, compare trade-offs, and agree on the product direction."],
+        ["define", "DEFINE", "A Tao", "Clarify the problem, context, constraints, and success criteria."],
+        ["decide", "DECIDE", "A Tao + GPT", "Explore possible approaches, compare trade-offs, and agree on the product direction."],
         ["build", "BUILD", "Codex", "Translate agreed decisions into a working prototype."],
-        ["review", "REVIEW", "Alex", "Test the output, identify gaps, and bring new findings into the next iteration."]
+        ["review", "REVIEW", "A Tao", "Test the output, identify gaps, and bring new findings into the next iteration."]
       ]
     : [
-        ["define", "定义", "Alex", "明确问题、真实场景、限制条件和成功标准。"],
-        ["decide", "决策", "Alex + GPT", "讨论可选方案、比较取舍，并共同确定产品方向。"],
+        ["define", "定义", "A Tao", "明确问题、真实场景、限制条件和成功标准。"],
+        ["decide", "决策", "A Tao + GPT", "讨论可选方案、比较取舍，并共同确定产品方向。"],
         ["build", "搭建", "Codex", "将已经确认的决策转化为可运行的原型。"],
-        ["review", "审查", "Alex", "实际测试结果、识别问题，并把新的发现带入下一轮。"]
+        ["review", "审查", "A Tao", "实际测试结果、识别问题，并把新的发现带入下一轮。"]
       ];
 
   return (
@@ -483,6 +483,7 @@ function DesignThinking({ section }: { section: Extract<DetailSection, { princip
 }
 
 function renderSectionContent(section: DetailSection, locale: Locale, slug: keyof typeof detailContent) {
+  const isCaseStudy = slug === featuredCaseStudy.slug;
   const isAiWorkflow = slug === "ai-short-form-video-workflow";
   const isWorkflowDemo = section.title === "Workflow Demo" || section.title === "工作流演示";
   const isWorkflowArchitecture = section.title === "Workflow Architecture" || section.title === "自动化工作流架构";
@@ -526,9 +527,9 @@ function renderSectionContent(section: DetailSection, locale: Locale, slug: keyo
   if ("flow" in section) {
     return (
       <>
-        <div className="flow-list">
-          {section.flow.map((item) => (
-            <span key={item}>{item}</span>
+        <div className={isCaseStudy ? "flow-list case-study-flow" : "flow-list"}>
+          {section.flow.map((item, index) => (
+            <span key={item}>{isCaseStudy && <small>0{index + 1}</small>}{item}</span>
           ))}
         </div>
         {isTikiBoom && isTikiWorkflow && (
@@ -558,7 +559,7 @@ function renderSectionContent(section: DetailSection, locale: Locale, slug: keyo
 
   if ("cards" in section) {
     return (
-      <div className="demo-card-grid">
+      <div className={isCaseStudy ? "demo-card-grid case-study-card-grid" : "demo-card-grid"}>
         {section.cards.map(([title, body]) => {
           const isMedicalDiet =
             slug === "codex-projects" &&
@@ -655,8 +656,15 @@ function renderSectionContent(section: DetailSection, locale: Locale, slug: keyo
 }
 
 export function ProjectDetailPage({ locale, slug }: ProjectDetailPageProps) {
-  const project = projects.find((item) => item.slug === slug);
+  const project = projects.find((item) => item.slug === slug) ?? (slug === featuredCaseStudy.slug ? {
+    slug: featuredCaseStudy.slug,
+    previewType: featuredCaseStudy.previewType,
+    title: featuredCaseStudy.title,
+    detailSubtitle: featuredCaseStudy.subtitle,
+    meta: featuredCaseStudy.meta
+  } : undefined);
   const detail = detailContent[slug];
+  const isCaseStudy = slug === featuredCaseStudy.slug;
 
   if (!project || !detail) {
     return null;
@@ -667,7 +675,7 @@ export function ProjectDetailPage({ locale, slug }: ProjectDetailPageProps) {
     <main className={`site-shell detail-shell detail-shell--${slug} detail-shell--${locale}`}>
       <header className="topbar detail-topbar">
         <Link className="name-badge" href={`/${locale}`}>
-          {locale === "en" ? "Alex" : "阿涛"}
+          {locale === "en" ? "A Tao" : "阿涛"}
         </Link>
         <Link className="back-link" href={`/${locale}`}>
           ← {locale === "en" ? "Back home" : "返回首页"}
@@ -677,12 +685,9 @@ export function ProjectDetailPage({ locale, slug }: ProjectDetailPageProps) {
 
       <section className="detail-hero">
         <p className="project-meta">{project.meta[locale].join(" / ")}</p>
-        <h1>
-          {slug === "tiki-boom" && locale === "zh" ? (
-            <><span>TIKI BOOM</span>{" "}<span>街头采访内容项目</span></>
-          ) : project.title[locale]}
-        </h1>
-        <p>{project.detailSubtitle[locale]}</p>
+        <h1>{project.title[locale]}</h1>
+        <p className="detail-subtitle">{project.detailSubtitle[locale]}</p>
+        {isCaseStudy && <p className="case-study-disclosure">{featuredCaseStudy.label[locale]}</p>}
       </section>
 
       {slug === "codex-projects" ? (
@@ -719,19 +724,19 @@ export function ProjectDetailPage({ locale, slug }: ProjectDetailPageProps) {
             </div>
             <div>
               <dt>{locale === "en" ? "Status" : "状态"}</dt>
-              <dd>{locale === "en" ? "In active development" : "持续迭代中"}</dd>
+              <dd>{isCaseStudy ? featuredCaseStudy.label[locale] : (locale === "en" ? "In active development" : "持续迭代中")}</dd>
             </div>
           </dl>
-          <ScreenshotFrame
-            locale={locale}
-            group={slug === "ai-short-form-video-workflow" ? "ai-workflow" : "tiki-evidence"}
-            order={slug === "ai-short-form-video-workflow" ? 3 : 0}
-            title={project.previewType[locale]}
-            src={slug === "ai-short-form-video-workflow" ? "/media/ai-workflow-card.png" : "/media/tiki-cover-interview.jpg"}
-            alt={project.title[locale]}
-            fit="cover"
-            emphasis="compact"
-          />
+          {!isCaseStudy && <ScreenshotFrame
+              locale={locale}
+              group={slug === "ai-short-form-video-workflow" ? "ai-workflow" : "tiki-evidence"}
+              order={slug === "ai-short-form-video-workflow" ? 3 : 0}
+              title={project.previewType[locale]}
+              src={slug === "ai-short-form-video-workflow" ? "/media/ai-workflow-card.png" : "/media/tiki-cover-interview.jpg"}
+              alt={project.title[locale]}
+              fit="cover"
+              emphasis="compact"
+            />}
         </aside>
 
         <div className="detail-sections">

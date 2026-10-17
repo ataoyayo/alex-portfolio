@@ -9,9 +9,10 @@ type HeroTextProps = {
     title: string;
     titleLines: readonly string[];
     description: string;
-    university: string;
-    degree: string;
+    supporting: string;
     issue: string;
+    primaryCta: string;
+    secondaryCta: string;
   };
 };
 
@@ -54,9 +55,9 @@ export function HeroText({ locale, hero }: HeroTextProps) {
 
   const opacity = useMemo(
     () => ({
-      title: 0.35 + progress * 0.65,
-      subtitle: 0.45 + progress * 0.55,
-      meta: 0.55 + progress * 0.45
+      title: 1,
+      subtitle: 0.98 + progress * 0.02,
+      meta: 0.98 + progress * 0.02
     }),
     [progress]
   );
@@ -76,12 +77,12 @@ export function HeroText({ locale, hero }: HeroTextProps) {
       <p className="hero-description" style={{ opacity: opacity.subtitle }}>
         {hero.description}
       </p>
-      <div className="hero-meta" style={{ opacity: opacity.meta }}>
-        <span>{hero.university}</span>
-        {/* TODO: Replace with Massey profile, degree page, or resume section link when available. */}
-        <a href="#" aria-label={hero.degree}>
-          {hero.degree}
-        </a>
+      <p className="hero-supporting" style={{ opacity: opacity.meta }}>
+        {hero.supporting}
+      </p>
+      <div className="hero-actions" style={{ opacity: opacity.meta }}>
+        <a className="hero-cta" href="#experience">{hero.primaryCta}</a>
+        <a className="hero-cta hero-cta--secondary" href="#projects">{hero.secondaryCta}</a>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ export default function Home() {
     <main className="site-shell">
       <meta httpEquiv="refresh" content={`0;url=${englishHome}`} />
       <p>
-        <Link href="/en">Open Alex Portfolio</Link>
+        <Link href="/en">Open A Tao Portfolio</Link>
       </p>
     </main>
   );
