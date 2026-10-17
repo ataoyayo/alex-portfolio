@@ -49,7 +49,7 @@ export function HomePage({ locale }: HomePageProps) {
             <article className="timeline-item" key={experience.company.en}>
               <div className="timeline-company">
                 <div className="logo-placeholder">
-                  {"logoSrc" in experience ? <img src={assetPath(experience.logoSrc)} alt={`${experience.company[locale]} logo`} /> : <span>{experience.logo}</span>}
+                  <img src={assetPath(experience.logoSrc)} alt={`${experience.company[locale]} logo`} />
                 </div>
                 <div><h3>{experience.company[locale]}</h3><p>{experience.time[locale]}</p></div>
               </div>

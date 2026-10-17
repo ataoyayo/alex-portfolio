@@ -189,6 +189,7 @@ export const experiences = [
       zh: "2026.06–2026.09"
     },
     logo: "LG",
+    logoSrc: "/media/logo-lilith-games.png",
     caseStudySlug: "anniversary-version-monetization-analysis",
     bullets: {
       en: [
